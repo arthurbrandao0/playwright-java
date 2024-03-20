@@ -1,6 +1,5 @@
 import com.microsoft.playwright.*;
 import com.microsoft.playwright.BrowserType.LaunchOptions;
-import org.junit.Test;
 
 import java.util.List;
 
