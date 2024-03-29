@@ -3,7 +3,7 @@ import com.microsoft.playwright.BrowserType.LaunchOptions;
 
 import java.util.List;
 
-public class windowHandlingTest {
+public class windowHandling {
 
     public static void main(String[] args) {
         Playwright playwright = Playwright.create();
