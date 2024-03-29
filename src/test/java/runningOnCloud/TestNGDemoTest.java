@@ -30,11 +30,11 @@ public class TestNGDemoTest extends PlaywrightConnection {
             page.navigate("https://www.duckduckgo.com");
             Locator locator = page.locator("[name=\"q\"]");
             locator.click();
-            locator.fill("LambdaTest");
+            locator.fill("Driuzzo");
             page.keyboard().press("Enter");
             String title = page.title();
 
-            if (title.equals("LambdaTest at DuckDuckGo")) {
+            if (title.equals("Driuzzo at DuckDuckGo")) {
                 super.setTestStatus("passed", "Title matched", page);
             } else {
                 super.setTestStatus("failed", "Title not matched", page);
