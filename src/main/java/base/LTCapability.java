@@ -14,7 +14,7 @@ public class LTCapability {
         capabilities1.addProperty("browserVersion", "latest");
         ltOptions1.addProperty("platform", "Windows 10");
         ltOptions1.addProperty("name", "Playwright Test");
-        ltOptions1.addProperty("build", "Playwright TestNG Build");
+        ltOptions1.addProperty("build", "Playwright POM Parallel Demo");
         ltOptions1.addProperty("user", user);
         ltOptions1.addProperty("accessKey", accessKey);
         capabilities1.add("LT:Options", ltOptions1);

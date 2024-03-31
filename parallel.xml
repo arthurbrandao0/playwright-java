@@ -1,0 +1,13 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="TestSuite" parallel="tests" thread-count="2">
+    <test name="Teste1">
+        <classes>
+            <class name="pomTests.RegisterUserTC"/>
+        </classes>
+    </test>
+    <test name="Teste2">
+        <classes>
+            <class name="pomTests.LoginUserTC"/>
+        </classes>
+    </test>
+</suite>
