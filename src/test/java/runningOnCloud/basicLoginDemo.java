@@ -9,6 +9,7 @@ import com.microsoft.playwright.BrowserType;
 import com.microsoft.playwright.Locator;
 import com.microsoft.playwright.Page;
 import com.microsoft.playwright.Playwright;
+import config.Config;
 
 public class basicLoginDemo {
 
@@ -16,8 +17,8 @@ public class basicLoginDemo {
         JsonObject capabilities = new JsonObject();
         JsonObject ltOptions = new JsonObject();
 
-        String user = "adriano.driuzzo";
-        String accessKey = "lR1WfpFWXPhtV5Fo5BhLkeb3BMXloQqsvO3KeQgVJy2LcpWbGy";
+        String user = Config.getUser();
+        String accessKey = Config.getAccessKey();
 
         capabilities.addProperty("browsername", "Chrome"); // Browsers allowed: `Chrome`, `MicrosoftEdge`,
         // `pw-chromium`, `pw-firefox` and `pw-webkit`
@@ -44,7 +45,7 @@ public class basicLoginDemo {
             page.keyboard().press("Enter");
             String title = page.title();
 
-            if (title.equals("Go at DuckDuckGo")) {
+            if (title.equals("LambdaTest at DuckDuckGo")) {
                 // Use the following code to mark the test status.
                 setTestStatus("passed", "Title matched", page);
             } else {

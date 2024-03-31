@@ -2,12 +2,14 @@ import static com.microsoft.playwright.assertions.PlaywrightAssertions.assertTha
 import com.microsoft.playwright.*;
 import com.microsoft.playwright.options.*;
 import com.microsoft.playwright.Browser.*;
+import config.Config;
 
 import java.nio.file.Paths;
-import java.util.*;
 
 public class codeGen {
     public static void main(String[] args) {
+        String username = Config.getUsername();
+        String password = Config.getPassword();
         Playwright playwright = Playwright.create();
             Browser browser = playwright.chromium().launch(new BrowserType.LaunchOptions()
                     .setHeadless(false));
@@ -20,9 +22,9 @@ public class codeGen {
 
             myAccount.click();
             page.getByPlaceholder("E-Mail Address").click();
-            page.getByPlaceholder("E-Mail Address").fill("adriano.driuzzo@hotmail.com");
+            page.getByPlaceholder("E-Mail Address").fill(username);
             page.getByPlaceholder("E-Mail Address").press("Tab");
-            page.getByPlaceholder("Password").fill("123456");
+            page.getByPlaceholder("Password").fill(password);
             page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("Login")).click();
             page.getByRole(AriaRole.LINK, new Page.GetByRoleOptions().setName("Edit your account")).click();
             page.getByPlaceholder("Last Name").click();

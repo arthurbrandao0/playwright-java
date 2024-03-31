@@ -2,7 +2,6 @@ import com.microsoft.playwright.*;
 import com.microsoft.playwright.Page.ScreenshotOptions;
 import com.microsoft.playwright.options.ScreenshotCaret;
 
-import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Arrays;

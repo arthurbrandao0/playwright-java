@@ -12,8 +12,5 @@ public class LoginPage {
         page.getByLabel("E-Mail Address").fill(email);
         page.getByLabel("Password").fill(password);
         page.locator("input[value='Login']").click();
-
-
-
     }
 }

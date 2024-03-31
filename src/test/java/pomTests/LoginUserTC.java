@@ -4,14 +4,12 @@ import base.Driver;
 import base.PlaywrightConnection;
 import com.ltpages.HeaderSection;
 import com.ltpages.LoginPage;
-import com.ltpages.RegisterAccountPage;
 import com.microsoft.playwright.Page;
 import com.microsoft.playwright.options.LoadState;
+import config.Config;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
-
-import java.util.Date;
 
 public class LoginUserTC extends PlaywrightConnection {
     Driver driver;
@@ -27,6 +25,9 @@ public class LoginUserTC extends PlaywrightConnection {
 
     @Test
     public void loginUser() {
+        String username = Config.getUsername();
+        String password = Config.getPassword();
+
         Page page = driver.getPage();
         HeaderSection header = new HeaderSection(page);
         LoginPage login = new LoginPage(page);
@@ -34,7 +35,7 @@ public class LoginUserTC extends PlaywrightConnection {
             page.navigate("https://ecommerce-playground.lambdatest.io/");
             page.waitForLoadState(LoadState.LOAD);
             header.clickLogin();
-            login.loginAsuser("adriano.driuzzo@hotmail.com", "123456");
+            login.loginAsuser(username, password);
 
             String title = page.title();
 

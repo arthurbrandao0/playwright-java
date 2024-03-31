@@ -7,6 +7,7 @@ import com.microsoft.playwright.Locator;
 import com.microsoft.playwright.Page;
 import com.microsoft.playwright.Playwright;
 import com.microsoft.playwright.options.AriaRole;
+import config.Config;
 
 public class learnPlaywrightInspector {
 
@@ -23,9 +24,9 @@ public class learnPlaywrightInspector {
                 new Page.GetByRoleOptions().setName("My account"));
         myAccount.click();
         page.getByPlaceholder("E-Mail Address")
-                .fill("koushik350@gmail.com");
+                .fill(Config.getUsername());
         page.getByPlaceholder("Password")
-                .fill("Pass123$");
+                .fill(Config.getPassword());
         page.getByRole(AriaRole.BUTTON,
                         new Page.GetByRoleOptions()
                                 .setName("Login"))
@@ -34,7 +35,7 @@ public class learnPlaywrightInspector {
                         new Page.GetByRoleOptions()
                                 .setName("Edit your account information"))
                 .click();
-        page.getByPlaceholder("ALast Name")
+        page.getByPlaceholder("Last Name")
                 .fill("C");
         page.getByRole(AriaRole.BUTTON,
                         new Page.GetByRoleOptions()

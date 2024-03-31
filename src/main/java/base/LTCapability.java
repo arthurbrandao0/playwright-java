@@ -1,14 +1,16 @@
 package base;
 
 import com.google.gson.JsonObject;
+import config.Config;
 
 public class LTCapability {
     public static JsonObject getDefaultTestCapability() {
         JsonObject capabilities1 = new JsonObject();
         JsonObject ltOptions1 = new JsonObject();
 
-        String user = "adriano.driuzzo";
-        String accessKey = "lR1WfpFWXPhtV5Fo5BhLkeb3BMXloQqsvO3KeQgVJy2LcpWbGy";
+        String user = Config.getUser();
+        String accessKey = Config.getAccessKey();
+
         capabilities1.addProperty("browsername", "Chrome"); // Browsers allowed: `Chrome`, `MicrosoftEdge`,
         // `pw-chromium`, `pw-firefox` and `pw-webkit`
         capabilities1.addProperty("browserVersion", "latest");
