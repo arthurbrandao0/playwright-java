@@ -36,7 +36,7 @@ public class learnPlaywrightInspector {
                                 .setName("Edit your account information"))
                 .click();
         page.getByPlaceholder("Last Name")
-                .fill("C");
+                .fill("Editado");
         page.getByRole(AriaRole.BUTTON,
                         new Page.GetByRoleOptions()
                                 .setName("Continue"))

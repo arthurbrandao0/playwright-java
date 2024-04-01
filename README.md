@@ -15,9 +15,9 @@ Para baixar o projeto, siga os passos abaixo:
 
 1. Clone o repositório do GitHub:
 
-   ```bash
+```bash
    git clone https://github.com/driuzzo/playwright-java
-
+```
 2. Acesse o diretório do projeto:
 
 ```bash
