@@ -6,7 +6,7 @@ Este projeto contém testes automatizados utilizando Playwright com Java com vá
 
 Certifique-se de ter o seguinte instalado em seu sistema:
 
-- Java Development Kit (JDK) 8 ou superior
+- Java Development Kit (JDK) 17 ou superior
 - Maven
 
 ## Como Baixar o Projeto
